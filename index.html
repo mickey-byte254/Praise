@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05030a">
+<title>Praise Michael — 19th Birthday</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--g:#ffd56a;--g2:#fff0b0;--bg:#05030a;--p:rgba(9,8,17,.72);--line:#ffd56a55;--mut:#c7c2d2}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-4;background:radial-gradient(circle at 50% 0,#39240d,transparent 36%),radial-gradient(circle at 15% 50%,#18112f,transparent 36%),#05030a}
+canvas{position:fixed;inset:0;z-index:-2;pointer-events:none}
+nav{height:74px;position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:#030207b5;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.brand{font:800 14px Cinzel;letter-spacing:4px}.brand span{color:var(--g)}nav .links{display:flex;gap:28px}nav a{color:#eee;text-decoration:none;font-size:13px}nav a:hover{color:var(--g)}
+.music{border:1px solid var(--line);background:#0b0911;color:var(--g);padding:10px 15px;border-radius:99px;cursor:pointer}
+section{padding:92px 6%;position:relative}.hero{min-height:100vh;padding-top:120px;display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:7px;font-size:12px;margin-bottom:13px}h1{font:800 clamp(55px,9vw,125px)/.86 Cinzel;letter-spacing:-5px;background:linear-gradient(#fff9dc,#ffd05a 52%,#a96a12);-webkit-background-clip:text;color:transparent}
+.script{font:clamp(44px,6vw,78px) "Great Vibes";color:var(--g);margin:13px 0}.lead{max-width:620px;color:#ddd7e4;line-height:1.8;font-size:17px}
+.date{display:flex;align-items:center;gap:18px;margin-top:25px}.big19{font:88px/.8 Cinzel;color:var(--g);text-shadow:0 0 28px #f6a51c66}.date strong{font:21px Cinzel;letter-spacing:5px}.date small{color:var(--mut)}
+.ctas{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:99px;text-decoration:none;font-weight:700;font-size:13px}.primary{background:linear-gradient(90deg,#ffe18a,#d99b22);color:#130d03}.ghost{border:1px solid var(--line);color:#fff;background:#ffffff08}
+.portrait-wrap{min-height:610px;display:grid;place-items:center;position:relative}.portrait{width:min(92%,530px);max-height:690px;object-fit:contain;filter:drop-shadow(0 30px 35px #000);animation:float 5s ease-in-out infinite;z-index:2}.ring{position:absolute;width:520px;height:520px;border:1px solid #ffd56a66;border-radius:50%;animation:spin 16s linear infinite}.ring:before,.ring:after{content:"✦";position:absolute;color:var(--g);font-size:20px}.ring:before{top:-12px;left:50%}.ring:after{bottom:-12px;right:18%}
+@keyframes float{50%{transform:translateY(-12px)}}@keyframes spin{to{transform:rotate(360deg)}}
+.head{text-align:center;margin-bottom:44px}.eyebrow{color:var(--g);letter-spacing:5px;font-size:11px;text-transform:uppercase}.head h2{font:600 clamp(32px,5vw,58px) Cinzel;margin:10px 0}.head p{color:var(--mut);max-width:680px;margin:auto;line-height:1.7}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:950px;margin:auto}.time,.card,.note{background:var(--p);border:1px solid #fff1;border-radius:22px;box-shadow:0 20px 65px #0008;backdrop-filter:blur(12px)}.time{padding:28px;text-align:center}.time b{font:42px Cinzel;color:var(--g)}.time span{display:block;color:#aaa;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-top:5px}
+.timeline{max-width:900px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:linear-gradient(var(--g),transparent)}.event{position:relative;padding:0 0 38px 55px}.dot{position:absolute;left:10px;top:2px;width:17px;height:17px;border-radius:50%;background:var(--g);box-shadow:0 0 22px #ffd56a}.event h3{font:600 18px Cinzel;color:var(--g);margin-bottom:6px}.event p{color:#cfc9d7;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.photo{height:410px;overflow:hidden;border-radius:20px;border:1px solid #ffd56a33;position:relative;background:#111;box-shadow:0 15px 45px #0008}.photo img{width:100%;height:100%;object-fit:cover;transition:.6s}.photo:hover img{transform:scale(1.07)}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#000c)}.photo label{position:absolute;z-index:2;bottom:18px;left:18px;font:12px Cinzel;letter-spacing:2px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px}.card h3{font:600 18px Cinzel;color:var(--g);margin-bottom:12px}.card p{color:#d0cbd7;line-height:1.8;font-size:14px}
+.note{max-width:900px;margin:auto;text-align:center;padding:55px 7%;border-color:var(--line)}blockquote{font:clamp(30px,4vw,52px)/1.25 "Great Vibes";color:#fff0bd}.signature{font:40px "Great Vibes";color:var(--g);margin-top:22px}
+footer{padding:40px 6%;border-top:1px solid #fff1;text-align:center;color:#8e8897;font-size:12px}.gold{color:var(--g)}
+.reveal{opacity:0;transform:translateY(24px);transition:1s}.reveal.show{opacity:1;transform:none}.firework{position:fixed;z-index:15;width:5px;height:5px;border-radius:50%;background:var(--g);pointer-events:none;animation:boom 1.05s ease-out forwards}@keyframes boom{0%{box-shadow:0 0 #fff;transform:scale(.2);opacity:1}100%{box-shadow:0 -110px #ffd56a,80px -80px #fff,110px 0 #ffd56a,80px 80px #fff,0 110px #ffd56a,-80px 80px #fff,-110px 0 #ffd56a,-80px -80px #fff;opacity:0}}
+@media(max-width:850px){nav .links{display:none}.hero{grid-template-columns:1fr;text-align:center}.lead{margin:auto}.date,.ctas{justify-content:center}.portrait-wrap{min-height:450px}.ring{width:360px;height:360px}.countdown{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.photo{height:310px}}
+@media(max-width:500px){h1{letter-spacing:-3px}.gallery{grid-template-columns:1fr}.photo{height:430px}section{padding:70px 5%}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<nav><div class="brand">♛ <span>PRAISE MICHAEL</span></div><div class="links"><a href="#home">Home</a><a href="#countdown">Countdown</a><a href="#journey">Journey</a><a href="#gallery">Gallery</a><a href="#message">Message</a></div><button class="music" id="musicBtn">♫ <span>Music Off</span></button></nav>
+
+<section class="hero" id="home">
+<div class="reveal"><div class="kicker">It's my day • a new chapter begins</div><h1>Happy<br>Birthday</h1><div class="script">Praise Michael</div><p class="lead">Nineteen years of life, lessons, grace and growth. Today is more than another birthday — it's a celebration of the journey so far and everything still waiting ahead.</p><div class="date"><div class="big19">19</div><div><strong>17 SEPTEMBER</strong><br><small>My birthday • My new chapter</small></div></div><div class="ctas"><a class="btn primary" href="#gallery">Explore the memories →</a><a class="btn ghost" href="#message">Read my note</a></div></div>
+<div class="portrait-wrap reveal"><div class="ring"></div><img class="portrait" src="images/photo-1.png" alt="Praise Michael in a black suit"></div>
+</section>
+
+<section id="countdown"><div class="head reveal"><div class="eyebrow">The moment</div><h2>Counting Down to 19</h2><p>17 September is the date. When it arrives, this page becomes a celebration of the new chapter.</p></div><div class="countdown reveal"><div class="time"><b id="days">00</b><span>Days</span></div><div class="time"><b id="hours">00</b><span>Hours</span></div><div class="time"><b id="mins">00</b><span>Minutes</span></div><div class="time"><b id="secs">00</b><span>Seconds</span></div></div></section>
+
+<section id="journey"><div class="head reveal"><div class="eyebrow">19 chapters</div><h2>The Journey So Far</h2><p>Every year adds another page. Every experience leaves something worth carrying forward.</p></div><div class="timeline reveal">
+<div class="event"><i class="dot"></i><h3>First Steps</h3><p>The beginning — curiosity, dreams and the people who helped shape the person I am becoming.</p></div>
+<div class="event"><i class="dot"></i><h3>Learning & Growing</h3><p>School, friendships, challenges and unexpected opportunities became part of the story.</p></div>
+<div class="event"><i class="dot"></i><h3>Finding My Voice</h3><p>Discovering creativity, purpose and the courage to keep building something meaningful.</p></div>
+<div class="event"><i class="dot"></i><h3>19 — A New Chapter</h3><p>More vision. More discipline. More gratitude. More reasons to keep going.</p></div></div></section>
+
+<section id="gallery"><div class="head reveal"><div class="eyebrow">Moments & memories</div><h2>My Gallery</h2><p>The four photos you selected, placed into their own polished gallery placeholders.</p></div>
+<div class="gallery reveal"><div class="photo"><img src="images/photo-1.png" alt="Praise Michael in a black suit"><label>THE FORMAL CHAPTER</label></div><div class="photo"><img src="images/photo-2.jpg" alt="Praise Michael in a suit taking a mirror photo"><label>THE MIRROR MOMENT</label></div><div class="photo"><img src="images/photo-3.jpg" alt="Praise Michael at an event"><label>THE PEOPLE & MOMENTS</label></div><div class="photo"><img src="images/photo-4.jpg" alt="Praise Michael outdoors"><label>THE EVERYDAY CHAPTER</label></div></div></section>
+
+<section><div class="head reveal"><div class="eyebrow">What matters</div><h2>The 19th-Year Mindset</h2></div><div class="cards reveal"><article class="card"><h3>Faith</h3><p>Stay grounded, grateful and hopeful through every season.</p></article><article class="card"><h3>Growth</h3><p>Keep learning, improving and becoming better than yesterday.</p></article><article class="card"><h3>Purpose</h3><p>Use every opportunity to create something that matters beyond yourself.</p></article></div></section>
+
+<section id="message"><div class="head reveal"><div class="eyebrow">A reminder to myself</div><h2>Dear Praise</h2></div><div class="note reveal"><blockquote>“Keep going. You are closer than you think. Stay focused, work hard, be kind, and never forget how far you've come. Nineteen is not the finish line — it is another beginning.”</blockquote><div class="signature">Praise Michael ✦</div></div></section>
+
+<section><div class="head reveal"><div class="eyebrow">One more thing</div><h2>Grateful for Today.</h2><p>Excited for tomorrow. Here's to 19 — bigger dreams, deeper gratitude and a future worth building.</p></div></section>
+<footer>© 2026 <span class="gold">Praise Michael</span> • 17 September • 19 years • <span class="gold">A new chapter begins.</span></footer>
+
+<script>
+const c=document.getElementById('stars'),x=c.getContext('2d');let W,H,S=[];
+function size(){W=c.width=innerWidth*devicePixelRatio;H=c.height=innerHeight*devicePixelRatio;S=Array.from({length:Math.min(170,Math.floor(innerWidth/6))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.2,a:Math.random(),s:Math.random()*.015+.004}))}
+function stars(){x.clearRect(0,0,W,H);for(const s of S){s.a+=s.s;if(s.a>1||s.a<.1)s.s*=-1;x.globalAlpha=s.a;x.fillStyle='#fff';x.beginPath();x.arc(s.x,s.y,s.r*devicePixelRatio,0,7);x.fill()}requestAnimationFrame(stars)}addEventListener('resize',size);size();stars();
+let target=new Date(new Date().getFullYear(),8,17);if(new Date()>target)target.setFullYear(target.getFullYear()+1);
+function tick(){let q=Math.max(0,target-new Date()),z=Math.floor(q/1000);days.textContent=String(Math.floor(z/86400)).padStart(2,'0');z%=86400;hours.textContent=String(Math.floor(z/3600)).padStart(2,'0');z%=3600;mins.textContent=String(Math.floor(z/60)).padStart(2,'0');secs.textContent=String(z%60).padStart(2,'0')}setInterval(tick,1000);tick();
+new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12}).observe(document.querySelector('.hero .reveal'));document.querySelectorAll('.reveal').forEach(e=>new IntersectionObserver(es=>es.forEach(a=>a.isIntersecting&&a.target.classList.add('show')),{threshold:.12}).observe(e));
+function boom(){let f=document.createElement('i');f.className='firework';f.style.left=15+Math.random()*70+'vw';f.style.top=12+Math.random()*55+'vh';document.body.append(f);setTimeout(()=>f.remove(),1100)}setInterval(boom,2300);setTimeout(boom,600);
+const music=new Audio('audio/kompa-birthday-instrumental.wav');music.loop=true;music.volume=.42;let on=false;musicBtn.onclick=async()=>{if(on){music.pause();on=false;musicBtn.innerHTML='♫ <span>Music Off</span>'}else{try{await music.play();on=true;musicBtn.innerHTML='♫ <span>Kompa On</span>'}catch(e){musicBtn.innerHTML='♫ <span>Tap again</span>'}}};
+</script>
+</body></html>
